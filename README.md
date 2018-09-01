@@ -1,2 +1,2 @@
 # News-App
-This is news application, which built using very components,itis stillin beta version,lot of improvement will ne introduced very soon!!!
+This is news application, which built using very basic  components,it is still in beta version,lot of improvement will be introduced very soon!!!
