@@ -28,8 +28,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     // URL to get contacts JSON
-    private static String url1 = "https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=2cf8d624b3a94a5f9cf9ff97719feda2";
-
+    private static String url1 = "https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=your api key";
     ArrayList<DataModel> articlelist;
 
 
