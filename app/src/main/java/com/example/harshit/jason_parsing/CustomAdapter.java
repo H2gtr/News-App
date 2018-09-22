@@ -20,7 +20,7 @@ import com.squareup.picasso.Picasso;
 import java.util.ArrayList;
 import java.util.List;
 
-import static android.support.v4.content.ContextCompat.startActivity;
+//import static android.support.v4.content.ContextCompat.startActivity;
 
 /**
  * Created by Harshit on 9/1/2018.
@@ -67,9 +67,26 @@ public class CustomAdapter extends ArrayAdapter<DataModel>{
             TextView description=(TextView)listitem.findViewById(R.id.description);
             description.setText(currentDataModel.getDescription());
             TextView url=(TextView)listitem.findViewById(R.id.url);
-            url.setText(currentDataModel.getUrl());
-          //  TextView url=(TextView)listitem.findViewById(R.id.url);
-        /*   txt.setOnClickListener(new View.OnClickListener() {
+           // url.setText(currentDataModel.getUrl());
+        url.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                String url1;
+                url1 = currentDataModel.getUrl();
+                Intent i = new Intent(Intent.ACTION_VIEW);
+                i.setData(Uri.parse(url1));
+                mcontext.startActivity(i);
+
+
+
+
+
+            }
+        });
+
+       /*   //  TextView url=(TextView)listitem.findViewById(R.id.url);
+           txt.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     Intent intent = new Intent(Intent.ACTION_VIEW).setData(Uri.parse(currentDataModel.getUrl()));
@@ -77,10 +94,10 @@ public class CustomAdapter extends ArrayAdapter<DataModel>{
                 }
             });
           //  url.setText(currentDataModel.getUrl());
-        NEED TO IMPLEMENT THS , WE HAVE TO MAKE LINK CLICKABLE BUT FOR LEAVE AS IT IS
+       // NEED TO IMPLEMENT THS , WE HAVE TO MAKE LINK CLICKABLE BUT FOR LEAVE AS IT IS
 
-          */
 
+*/
 
 
 

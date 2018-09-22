@@ -3,4 +3,12 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+    <color name="primaryTextColor">#F4F4F6</color>
+    <color name="secondaryTextColor">#96F4F4F6</color>
+    <color name="backgroundCardColor">#FFFF</color>
+    <color name="dividerColor">#F2F2F3</color>
+
+
+
+
 </resources>

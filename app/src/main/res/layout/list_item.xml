@@ -5,13 +5,13 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
-<android.support.v7.widget.CardView
+<!--<android.support.v7.widget.CardView
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     app:cardCornerRadius="@dimen/cardview_compat_inset_shadow"
     app:cardElevation="@dimen/cardview_compat_inset_shadow"
 
-    >
+    >-->
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -41,22 +41,27 @@
         android:layout_height="wrap_content"
         android:paddingBottom="2dip"
         android:textSize="14sp"
-        android:textColor="@color/colorPrimaryDark" />
+        android:textColor="@color/cardview_dark_background" />
+
 
     <TextView
         android:id="@+id/url"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="35dip"
         android:textColor="#5d5d5d"
         android:textStyle="bold"
-        android:text="more"
+        android:text="click for more "
         android:clickable="true"
-
+      android:backgroundTintMode="screen"
+        android:focusedByDefault="true"
+        android:background="@color/cardview_light_background"
         android:onClick="dothis"
+
         android:layout_marginBottom="20dip"
 
         />
+
     </LinearLayout>
 
-</android.support.v7.widget.CardView>
+<!--</android.support.v7.widget.CardView>   -->
 </LinearLayout>

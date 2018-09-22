@@ -5,6 +5,8 @@ import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
@@ -24,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
     private ProgressDialog pDialog;
     private ListView lv;
 
+
     // URL to get contacts JSON
     private static String url1 = "https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=2cf8d624b3a94a5f9cf9ff97719feda2";
 
@@ -41,10 +44,40 @@ public class MainActivity extends AppCompatActivity {
         lv = (ListView) findViewById(R.id.list);
 
         new GetContacts().execute();
+    }
+
+
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+
+        getMenuInflater().inflate(R.menu.option_menu,menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+
+        Toast.makeText(getApplicationContext(),""+item.getTitle(),Toast.LENGTH_LONG).show();
+
+        switch(item.getItemId()){
+
+            case R.id.profile:
+                Toast.makeText(getApplicationContext(),"Need to implement"+item.getTitle(),Toast.LENGTH_LONG).show();
+                return true;
+            case R.id.setting:
+                Toast.makeText(getApplicationContext(),"Need to implement"+item.getTitle(),Toast.LENGTH_LONG).show();
+                return true;
+            case R.id.about:
+                Toast.makeText(getApplicationContext(),"Need to implement"+item.getTitle(),Toast.LENGTH_LONG).show();
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+
 
 
     }
-
 
     private class GetContacts extends AsyncTask<Void, Void, Void> {
 
@@ -97,6 +130,7 @@ public class MainActivity extends AppCompatActivity {
 
                         // adding each child node to HashMap key => value
                         articlelist.add(new DataModel(title,description, url,urlToImage));
+
                         //article.put("description", description);
                         //article.put("url", url);
                         //article.put("urlToImage",urlToImage);
